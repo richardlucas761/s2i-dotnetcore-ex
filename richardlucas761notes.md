@@ -4,7 +4,7 @@ Notes on creating my first OpenShift application.
 
 ## Build failed on first test
 
-I created a new Open Shift application in the Starter environment from the source code at my fork of the sample at https://github.com/richardlucas761/s2i-dotnetcore-ex but I must have something wrong with the configuration because I'm getting this build error:
+I created a new Open Shift application in the Starter environment from the source code at my fork https://github.com/richardlucas761/s2i-dotnetcore-ex of the sample at https://github.com/redhat-developer/s2i-dotnetcore-ex but I must have something wrong with the configuration because I'm getting this build error:
 
 ```
 Cloning "https://github.com/richardlucas761/s2i-dotnetcore-ex " ...
@@ -24,4 +24,10 @@ error: build error: non-zero (13) exit code from registry.access.redhat.com/dotn
 
 I tried adding a new environment variable called "DOTNET_STARTUP_PROJECT" with a value of "app/app.csproj" but the build was still broken with the same error.
 
-*TBC when I figure out what the error is*
+## Tried the sample build and that worked okay
+
+I couldn't figure out what the issue was with my forked branch of the default sample at https://github.com/redhat-developer/s2i-dotnetcore-ex so I tried using that repository instead.
+
+That worked and I was able to deploy from that GIT repository although I don't understand what the difference is between this repository and my fork?
+
+There must be something else involved I don't understand yet.
